@@ -9,7 +9,6 @@ const Search = () => {
   const [results, setResults] = useState()
   const [coordinates, setCoordinates] = useState({ lon: 0, lat: 0 })
   const [city, setCity] = useState()
-  console.log(import.meta.env.VITE_API_KEY)
   const getSearchResults = () => {
     //Uses GEO Api to get cities and coordinates
 
