@@ -48,7 +48,7 @@ const Search = () => {
         <button className="search-button" onClick={() => getSearchResults()}>
           Search
         </button>
-        <span style={{ padding: "4px" }}>Results: </span>
+
         {results === undefined
           ? null
           : results.map((res, index) => {
