@@ -1,11 +1,13 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  display: flex;
+  height: 100vh;
 }
 
 .card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: orange;
   height: 400px;
   width: 400px;
@@ -14,4 +16,47 @@
 
 .card-title {
   font-size: 24px;
+}
+
+.card-icon {
+  width: 100px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  padding: 4px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.search-button {
+  height: 40px;
+  width: 170px;
+  border: none;
+  border-radius: 16px;
+  background-color: aqua;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  margin: 4px;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 16px;
+  width: 150px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.result:hover {
+  background-color: lightgray;
 }

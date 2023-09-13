@@ -41,10 +41,14 @@ const Search = () => {
     <>
       <div className="search-container">
         <input
+          className="search-input"
           placeholder="Search for City"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}></input>
-        <button onClick={() => getSearchResults()}>Search</button>
+          onChange={(e) => setSearch(e.target.value.toUpperCase())}></input>
+        <button className="search-button" onClick={() => getSearchResults()}>
+          Search
+        </button>
+        <span style={{ padding: "4px" }}>Results: </span>
         {results === undefined
           ? null
           : results.map((res, index) => {
@@ -54,8 +58,9 @@ const Search = () => {
                   onClick={() => {
                     setCoordinates({ lon: res.lon, lat: res.lat })
                   }}>
-                  <div>name: {res.name}</div>
-                  <div>country: {res.country}</div>
+                  <div className="result">
+                    {res.name}, {res.country}
+                  </div>
                 </div>
               )
             })}
