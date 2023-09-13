@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import Card from "./Card"
 
-const GEOurl = "http://api.openweathermap.org/geo/1.0/direct?"
+const GEOurl = "https://api.openweathermap.org/geo/1.0/direct?"
 
 const Search = () => {
   const [search, setSearch] = useState("")
@@ -31,7 +31,6 @@ const Search = () => {
       )
       .then(function (response) {
         setCity(response.data)
-        console.log(response)
       })
       .catch(function (error) {
         console.log(error)
