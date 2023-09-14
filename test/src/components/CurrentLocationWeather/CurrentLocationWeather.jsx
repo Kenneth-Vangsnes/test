@@ -32,9 +32,9 @@ const CurrentLocationWeather = ({ weather }) => {
             <SiWindicss size={"20px"} style={{ margin: "4px" }} />
             {Math.ceil(weather.wind.speed)}
             <span style={{ fontSize: "13px" }}>
-              {weather.wind.gust === undefined
-                ? null
-                : Math.ceil(weather.wind.gust)}
+              {weather.wind.gust === undefined ? null : (
+                <span>({Math.ceil(weather.wind.gust)})</span>
+              )}
             </span>
             <span style={{ fontSize: "11px", marginLeft: "2px" }}>m/s</span>
           </div>
