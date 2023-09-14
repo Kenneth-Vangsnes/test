@@ -1,0 +1,34 @@
+.container {
+  width: 75%;
+  height: 50px;
+  background-color: rgba(128, 128, 128, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  position: fixed;
+  top: 100px;
+}
+
+.temperature {
+  color: red;
+  margin-right: 6px;
+  margin-left: 2px;
+}
+
+.feels-like {
+  font-size: 11px;
+}
+
+.rain {
+  margin-right: 4px;
+  margin-left: 4px;
+  color: blue;
+}
+
+.wind {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
