@@ -1,10 +1,12 @@
 import "./App.css"
-import Search from "./components/Search"
+import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
     <>
-      <Search />
+      <Navbar />
+      <Hero />
     </>
   )
 }
