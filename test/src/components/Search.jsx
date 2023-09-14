@@ -11,7 +11,6 @@ const Search = () => {
   const [city, setCity] = useState()
   const getSearchResults = () => {
     //Uses GEO Api to get cities and coordinates
-
     axios
       .get(`${GEOurl}q=${search}&limit=5&appid=${import.meta.env.VITE_API_KEY}`)
       .then(function (response) {
@@ -27,7 +26,7 @@ const Search = () => {
       .get(
         `${import.meta.env.VITE_API_BASE_URL}?lat=${coordinates.lat}&lon=${
           coordinates.lon
-        }&appid=${import.meta.env.VITE_API_KEY}`
+        }&appid=${import.meta.env.VITE_API_KEY}&units=metric`
       )
       .then(function (response) {
         setCity(response.data)
