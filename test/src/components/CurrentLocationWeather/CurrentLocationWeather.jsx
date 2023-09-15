@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./index.css"
 import { FaTemperatureFull, FaUmbrella } from "react-icons/fa6"
+import { FiArrowUp } from "react-icons/fi"
 import { SiWindicss } from "react-icons/si"
 
 const iconURL = "https://openweathermap.org/img/wn/"
@@ -11,6 +12,7 @@ const CurrentLocationWeather = ({ weather }) => {
     <div className="container">
       {weather ? (
         <>
+          <div className="location">The weather in {weather.name}</div>
           <img
             className="weather-icon"
             src={`${iconURL}${weather.weather[0].icon}@2x.png`}
@@ -37,9 +39,12 @@ const CurrentLocationWeather = ({ weather }) => {
               )}
             </span>
             <span style={{ fontSize: "11px", marginLeft: "2px" }}>m/s</span>
+            <FiArrowUp style={{ transform: `rotate(${weather.wind.deg})` }} />
           </div>
         </>
-      ) : null}
+      ) : (
+        <>Location not aquired</>
+      )}
     </div>
   )
 }
