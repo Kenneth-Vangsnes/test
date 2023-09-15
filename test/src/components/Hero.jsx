@@ -43,7 +43,11 @@ const Hero = () => {
 
   return (
     <div className="main-container">
-      <CurrentLocationWeather weather={weather} />
+      {
+        {
+          /* <CurrentLocationWeather weather={weather} /> */
+        }
+      }
       <Search />
     </div>
   )
