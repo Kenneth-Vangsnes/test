@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import Card from "./Card"
+import { BiSearch } from "react-icons/bi"
 
 const GEOurl = "https://api.openweathermap.org/geo/1.0/direct?"
 
@@ -39,14 +40,16 @@ const Search = () => {
   return (
     <>
       <div className="search-container">
-        <input
-          className="search-input"
-          placeholder="Search for City"
-          value={search}
-          onChange={(e) => setSearch(e.target.value.toUpperCase())}></input>
-        <button className="search-button" onClick={() => getSearchResults()}>
-          Search
-        </button>
+        <div className="search-components">
+          <input
+            className="search-input"
+            placeholder="Search for City"
+            value={search}
+            onChange={(e) => setSearch(e.target.value.toUpperCase())}></input>
+          <button className="search-button" onClick={() => getSearchResults()}>
+            <BiSearch size={"20px"} />
+          </button>
+        </div>
 
         {results === undefined
           ? null
@@ -56,6 +59,8 @@ const Search = () => {
                   key={res.name + index}
                   onClick={() => {
                     setCoordinates({ lon: res.lon, lat: res.lat })
+                    setResults(undefined)
+                    setSearch("")
                   }}>
                   <div className="result">
                     {res.name}, {res.country}
