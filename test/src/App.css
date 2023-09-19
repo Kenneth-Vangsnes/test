@@ -104,6 +104,7 @@ body {
   background-color: rgb(106, 167, 242, 0.5);
   height: 400px;
   width: 300px;
+  margin-top: 10px;
   border-radius: 50%;
 }
 
@@ -132,22 +133,42 @@ body {
 .card-weather-type {
   top: 15px;
   margin-top: -15px;
-  margin-bottom: 5px;
+  margin-bottom: 8%;
+}
+
+.card-temperature-div {
+  display: flex;
+  align-items: center;
 }
 
 .card-temperature {
-  font-size: 16px;
+  font-size: 1.4rem;
   color: red;
   margin-bottom: 4px;
   margin-top: 0;
 }
 
 .card-feels-like {
-  font-size: 11px;
+  font-size: 0.8rem;
   margin: 0;
+  margin-bottom: 8px;
+}
+
+.card-rain {
+  margin: 8px;
+}
+
+.card-rain-amount {
+  color: blue;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.card-wind-div {
+  display: flex;
 }
 
 .card-wind {
-  margin-top: 15px;
-  margin: 0;
+  font-size: 1.2rem;
+  margin: 0 5px 0 5px;
 }
