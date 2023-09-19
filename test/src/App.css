@@ -1,6 +1,5 @@
 html,
 body {
-  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,7 @@ body {
 .navbar-container {
   height: 65px;
   width: 100vw;
-  position: fixed;
+  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   justify-content: center;
   align-items: center;
 }
