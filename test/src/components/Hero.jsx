@@ -13,6 +13,7 @@ const Hero = () => {
       navigator.geolocation.getCurrentPosition(success, error)
     } else {
       console.log("Geolocation not supported")
+      setLocation({ longitude: 0, latitude: 0 })
     }
   }, [])
 
@@ -39,11 +40,12 @@ const Hero = () => {
 
   function error() {
     console.log("Unable to retrieve your location")
+    setLocation({ longitude: 0, latitude: 0 })
   }
 
   return (
     <div className="main-container">
-      {/* <CurrentLocationWeather weather={weather} /> */}
+      <CurrentLocationWeather weather={weather} />
 
       <Search />
     </div>

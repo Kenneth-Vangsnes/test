@@ -7,7 +7,6 @@ import { SiWindicss } from "react-icons/si"
 const iconURL = "https://openweathermap.org/img/wn/"
 
 const CurrentLocationWeather = ({ weather }) => {
-  console.log(weather)
   return (
     <div className="container">
       {weather ? (
