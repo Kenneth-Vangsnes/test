@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import "./App.css"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
@@ -6,14 +5,12 @@ import Navbar from "./components/Navbar"
 function App() {
   useEffect(() => {
     const handleResize = () => {
-      const initialHeight = window.innerHeight
-
-      document.documentElement.style.setProperty("overflow", "auto")
       const metaViewport = document.querySelector("meta[name=viewport]")
       metaViewport.setAttribute(
         "content",
-        "height=" + initialHeight + "px, width=device-width, initial-scale=1.0"
+        "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       )
+      console.log("hey")
     }
 
     window.addEventListener("resize", handleResize)
